@@ -1,0 +1,8 @@
+Q: Create two users: john with uid/gid equal to 2000 and davis with uid/gid equal to 3000
+
+1- Create john user:
+   useradd john -u 2000
+
+2- Create davis user:
+   useradd davis -u 3000
+

@@ -1,0 +1,18 @@
+Q: Create a logical volume of 200MB called lv_swap2 and add it permanently to the current swap space.
+
+(Assuming volume group is created before)
+
+1: Create the logical volume first:
+   lvcreate <vg name> -L 200 -n lv_swap2
+
+2: Make the logical volume as swap space:
+   mkswap /dev/mapper/path/to/the/lv
+
+3: Activate the swap partition:
+   swapon /dev/mapper/path/to/the/lv
+
+4: Add the LV to /etc/fstab by creating new line:
+   /dev/mapper/path/to/the/lv      none                    swap    defaults        0 0
+
+5: Verify the /etc/fstab is correct by remounting:
+   mount -a

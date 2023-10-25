@@ -1,0 +1,28 @@
+Q:
+-Create group sysgrp
+-Create user andrew and susan who belong to this group (as secondary group)
+-Create user sarah who does not have an access to the shell
+-Password for all the users should be Postroll
+
+1- Create sysgrp group:
+   groupadd sysgrp
+
+2- Add andrew and susan users then add to sysgrp group:
+   useradd andrew
+   useradd susan
+
+   usermod andrew -G sysgrp
+   usermod susan -G sysgrp
+
+3- Create sarah user with no shell access:
+   useradd susan
+   usermod susan -s /sbin/nologin
+
+4- Give "Postroll" as password to these users:
+   passwd andrew
+   passwd susan
+   passwd sarah
+
+5- Verify sarah user cannot access to interactive shell:
+   su - sarah
+   (System should print "This account is currently not available")

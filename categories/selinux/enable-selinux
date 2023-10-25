@@ -1,0 +1,10 @@
+Q: Enable SELinux in enforcing mode
+
+1- Set SELinux to enforcing mode:
+   setforce 1
+
+2- Make SELinux is enforcing on boot:
+   vim /etc/selinux/config
+   Find SELINUX= line
+   Change the line as SELINUX=enforcing
+

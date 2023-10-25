@@ -1,0 +1,12 @@
+Q: Change an XFS filesystem's label to myFS.
+
+1- Check the target filesystem with lsblk
+
+2- Umount the filesystem if mounted:
+   umount /dev/path/to/the/fs
+
+3- Change the label by using xfs_admin tool:
+   xfs_admin -L myfs /dev/path/to/the/fs
+
+4- Remount the filesystem if needed:
+   mount /dev/path/to/the/fs

@@ -1,0 +1,23 @@
+Question: Create new physical partition with 100MB size and mount it under /meet
+
+1- Check for available physical partitions first: 
+   lsblk
+
+2- Create a new physical partition from a target block device:
+   fdisk /dev/path/to/the/device
+
+3- Create a partition table if not exists:
+   g
+
+4- Create a new partition:
+   n
+   Give the default partition number by pressing enter
+   Assign the default first sector by pressing enter
+   For the last sector, type +100M to give 100MB of space
+   w to write changes to the disks
+
+5- Create a filesystem on it:
+   mkfs.ext4 /dev/path/to/the/new/partition
+
+6- Mount in under /meet
+   mount /dev/path/to/the/new/partition /meet

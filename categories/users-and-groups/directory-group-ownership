@@ -1,0 +1,19 @@
+Q: Create a directory named /common. Allow john and davis to share documents in the /common directory using a group called team. Both of them can read, write and remove documents from the other in this directory but any user not member of the group can’t.
+
+(Assuming john and davis users have been created before.)
+
+1- Create /common directory:
+   sudo mkdir /common
+
+2- Create the team group
+   groupadd team
+
+3- Add the users to team group:
+   usermod davis -G team
+   usermod john -G team
+
+4- Change /common's group to team
+   chgrp team /common
+
+5- Give specified permissions for /common:
+   chmod 770 /common

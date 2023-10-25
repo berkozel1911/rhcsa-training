@@ -1,0 +1,7 @@
+Q: Set the default target to boot into X Window level.
+
+1- Set the default target to graphical target via systemctl:
+   systemctl set-default graphical.target
+
+2- To check default target with:
+   systemctl get-default

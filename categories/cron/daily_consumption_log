@@ -1,0 +1,10 @@
+Q: Create a cron job running as root, starting at 11PM every day and writing a report on daily system resource consumption in the /var/log/consumption.log file.
+
+1- Check whether sysstat is installed on system:
+   dnf install -y sysstat
+
+2- Start & enable the service:
+   systemctl enable sysstat --now
+
+3- Run crontab -e command as root then type the following:
+   0 23 * * * /usr/bin/sar -A > /var/log/consumption.log

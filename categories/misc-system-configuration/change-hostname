@@ -1,0 +1,6 @@
+Q: Change hostname of the system
+
+1- Use hostnamectl tool:
+   # hostnamectl --set-hostname <new hostname>
+
+2- Or edit /etc/hostname with a text editor

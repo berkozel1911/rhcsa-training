@@ -1,0 +1,26 @@
+Question: Please create new network connection using provided values: 
+IP: 192.168.122.32
+Mask: /24
+Gateway: 192.168.122.1
+DNS: 1.1.1.1
+Interface: eth0
+Connection name: testnt
+
+1- Check available network interfaces:
+   ip link
+
+2- Add new connection:
+   nmcli conn add type ethernet ifname <name-of-network-interface> con-name testnt
+
+3- Set IP address to manual:
+   nmcli conn mod con-name testnt ipv4.method manual ipv4.address "192.168.122.32/24"
+
+4- Set Gateway:
+   nmcli conn mod con-name testnt ipv4.gateway "192.168.122.1"
+
+5- Set DNS:
+   nmcli conn mod con-name testnt ipv4.dns "1.1.1.1"
+
+6- Verify new connection with:
+   nmcli conn show
+   or use nmtui

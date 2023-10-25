@@ -1,0 +1,10 @@
+Q: Extend the existing xfs file system to a total size of 200MB
+
+1- Check existing filesystems with lsblk first
+
+2- Umount the filesystem if it's already mounted:
+   umount /dev/mapper/<logical_volume>
+
+3- Extend logical volume and notice the filesystem is about to extended:
+   lvextend -L +200M -r /dev/mapper/<logical_volume>
+
