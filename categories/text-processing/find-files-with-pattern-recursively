@@ -1,0 +1,5 @@
+Q: Find All Files in /etc (not subdirectories) that contain text "chrony" (ignore case).
+
+1- Use grep's command line options for that:
+   grep -irls chrony /etc
+
