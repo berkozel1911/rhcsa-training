@@ -1,0 +1,17 @@
+Q: Create a user (named user) that can connect to the machine without a password.
+
+1- Create the "user" user:
+   useradd user
+
+2- Switch to "user" user to generate it's key:
+   su - user
+   ssh-keygen
+
+3- Give a password to "user" user to copy it's id:
+   passwd user
+
+4- On the client computer, copy the ID:
+   ssh-copy-id -f user@<sshd's ip>
+
+5- Test the login with: 
+   ssh user@<sshd's ip>

@@ -1,0 +1,10 @@
+Q: When a user tries to log in over SSH, display a legal message about not allowing unauthorized access to this system.
+
+1- Edit the SSHD config:
+   sudo vim /etc/ssh/sshd_config
+   Banner /etc/bannerfile
+
+2- Write your message in /etc/bannerfile
+   
+3- Restart SSHD service:
+   sudo systemctl restart sshd

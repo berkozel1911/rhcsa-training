@@ -1,0 +1,4 @@
+Q: Configure the time zone to GMT.
+
+1- Use timedatectl:
+   sudo timedatectl set-timezone GMT

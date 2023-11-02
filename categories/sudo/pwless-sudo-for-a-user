@@ -1,0 +1,9 @@
+Q: The user user should be able to become the root user without a password and also execute commands without a password.
+
+1- Run visudo to edit /etc/sudoers file:
+   visudo
+
+2- Add the following line to sudoers file:
+   user ALL=(ALL)       NOPASSWD:ALL
+
+3- Save and exit the file.
