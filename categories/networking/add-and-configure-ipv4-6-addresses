@@ -1,0 +1,10 @@
+Q: Configure a network connection with IPv4 and IPv6 addresses named mynic, using the
+   following data:
+   Ip6: 2001:db8:0:1::c000:207/64 g
+   gateway 2001:db8:0:1::1
+   Ipv4 192.0.1.3/24
+   gateway 192.0.1.1
+
+nmcli conn add con-name mynic type ethernet ifname enp1s0
+
+nmcli con mod mynic ipv6.addresses 2001:db8:0:1::c000:207/64 ipv6.gateway 2001:db8:0:1::1 ipv4.addresses 192.0.1.3/24 ipv4.gateway 192.0.1.1

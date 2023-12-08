@@ -1,0 +1,4 @@
+Q: Create a bot user named privacy that will keep its files only visible to itself by default.
+
+adduser privacy
+sudo -u privacy echo "umask 0077" >> /home/privacy/.bashrc

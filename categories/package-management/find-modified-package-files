@@ -1,0 +1,4 @@
+Q: Report the files modified from those that the vendor distributed, 
+   and store them in /root/altered.txt.
+
+rpm -Va > /root/altered.txt

@@ -1,0 +1,4 @@
+Q: inding all man page names in the system, and putting the
+names into a file named manpages.txt
+
+find /usr/share/man -type f > manpages.txt

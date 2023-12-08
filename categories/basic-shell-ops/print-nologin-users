@@ -1,0 +1,4 @@
+Q: Print usernames for users without logins permitted to the system. For each username, print
+the user ID (UID) and groups for that user.
+
+grep nologin /etc/passwd | cut -d : -f 1 | xargs id

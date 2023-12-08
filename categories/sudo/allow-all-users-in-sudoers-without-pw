@@ -1,0 +1,7 @@
+Q: Allow all users in the users group to become root without a password.
+
+1- Open the /etc/sudoers file:
+visudo
+
+2- Add the following line:
+%users ALL=(ALL)        NOPASSWD:ALL

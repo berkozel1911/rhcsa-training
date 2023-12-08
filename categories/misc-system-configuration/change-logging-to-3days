@@ -1,0 +1,6 @@
+Q: Configure the system to only leave 3 days of logs.
+
+vim /etc/logrotate.conf
+
+daily
+count 3

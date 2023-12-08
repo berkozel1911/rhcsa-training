@@ -1,0 +1,13 @@
+Q: Allow the host to use the hostname google to reach www.google.com,
+   and the hostname redhat to reach www.redhat.com.
+
+1- Get the IP addresses of google.com and redhat.com
+
+2- Open the /etc/hosts file:
+
+sudo vi /etc/hosts
+
+3- Add the following lines:
+
+<IP address of google.com> google
+<IP adress of redhat.com>  redhat

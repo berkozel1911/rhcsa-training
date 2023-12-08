@@ -1,0 +1,5 @@
+Q: Configure the time synchronization against pool.ntp.org, using Fast Sync.
+
+vim /etc/chrony.conf
+
+pool pool.ntp.conf iburst
